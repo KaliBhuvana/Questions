@@ -1,0 +1,24 @@
+1) What is the difference between Absolute Path and Relative Path?
+
+	Absolute XPath starts from the root node and ends with desired descendant element’s node. It starts with top HTML node and ends with input node. It starts with a single forward slash(/) as shown below.
+
+		Eg: /html/body/div[3]/div[1]/form/table/tbody/tr[1]/td/input
+
+	Relative XPath starts from any node in between the HTML page to the current element’s node(last node of the element). It starts with a double forward slash(//) as shown below.
+
+		Eg: //input[@id='email']
+
+2) How to verify if the given check box is checked or not (it is not taught but you can explore) Try here: http://leafground.com/pages/checkbox.html
+
+System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://testleaf.herokuapp.com/pages/checkbox.html");
+
+		boolean selected = driver
+				.findElementByXPath("(//label[text()='Confirm Selenium is checked']/following::input)[1]").isSelected();
+		if (selected == true) {
+			System.out.println("checkbox is checked");
+		} else {
+			System.out.println("checkbox is not checked");
+		}

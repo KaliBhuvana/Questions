@@ -1,0 +1,17 @@
+1) Define the Syntax to create an object for a class. What are the naming conventions to be followed while creating a class, method and a variable. Explain with examples.
+
+	Create an object for a class:
+<classname>  reference name = new <constructername()>;
+
+Name convention:
+Classname: should start with uppercase letter and be a noun e.g. String, Color, Button, System, Thread and etc.
+
+MethodName: should start with lowercase letter and be a verb e.g. Main(), gettext(), println() and etc.
+
+VariableName: should start with lowercase letter e.g. Firstname, lastname and etc.
+
+	
+	Ex:ChromeDriver driver = new ChromeDriver();
+2) What are the access modifiers available in Java?
+	Java provides access control through public, private and protected access modifier keywords. When none of these are used, it’s called default access modifier.
+A java class can only have public or default access modifier.

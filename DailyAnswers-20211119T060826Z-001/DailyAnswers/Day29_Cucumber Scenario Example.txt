@@ -1,0 +1,47 @@
+1) Create the feature, step definition and TestRunner file for Login Scenario.
+
+Feature File: “Login the web application”
+
+Feature: Login into the web application with username and password
+
+Scenario: Login the web application
+
+Given: Open Chrome browser and enter the URL
+
+When: UserName and Password is provided
+
+Then: Validate if login is successful
+
+Step Definition File:
+	@Given(Open Chrome browser and enter the URL)
+	public void OpenChromeBrowser() {
+		driver = new ChromeDriver();
+		driver.navigate.To(“http://leaftaps.com/”);
+	}
+	@When(UserName and Password is provided)
+	public void OpenChromeBrowser() {
+		driver.findElementById("username").sendkeys("username");
+		driver.findElementById("password").sendkeys("password");
+	}
+	@Then(Validate if login is successful)
+	public void OpenChromeBrowser() {
+		driver.findElementById("login").click();
+		if (driver.findElementById("logged in User").getText().Equals("username")){
+			System.Out.Println("Login Success");
+		} else {
+			System.Out.Println("Login Failed");
+		}
+	}
+
+Test Runner:
+	Package com.sample.TestRunner
+
+	importcucumber.api.CucumberOptions; 
+	importcucumber.api.junit.Cucumber;
+
+	@CucumberOptions(features="Features",glue={"StepDefinition"}) 
+	public class Runner extends AbstractTestngCucumberTests {
+	}
+
+2) What is the use of Background keyword in Cucumber? Provide an example.
+	Background keyword is used to group multiple given statements into a single group (i.e.,) a test case or series of steps which are common to all the tests in a feature file. This is generally used when the same set of given statements are repeated in each scenario of the feature file.

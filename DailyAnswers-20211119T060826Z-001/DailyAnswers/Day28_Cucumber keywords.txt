@@ -1,0 +1,28 @@
+1) What are the various keywords that are used in Cucumber for writing a scenario? Explain with their purpose.
+
+Keywords used in Cucumber:
+	a) Given - It specifies some context of the test to be executed.
+	b) When - It specifies some test action that needs to be carried out.
+	c) Then - It specifies the expected result of the test.
+	d) And - It is used for additional conditions, if any.
+
+2) What is the purpose of a Scenario Outline and Examples keyword in Cucumber?
+	Scenario outline is a way of parameterization of scenarios. This is ideally used when the same scenario needs to be executed for multiple sets of data, however, the test steps remain the same. Scenario Outline must be followed by the keyword ‘Examples’, which specify the set of values for each parameter.
+	Examples keyword is used to specify values for each parameter used in the scenario. Pipe symbol (|) is used to specify one or more parameter values in a feature file.
+
+Example: Uploading a file
+
+Scenario Outline: Upload a file
+
+Given that the user is on upload file screen.
+When a user clicks on the Browse button.
+And user enters <filename> onto the upload textbox.
+And user clicks on the enter button.
+Then verify that the file upload is successful.
+
+Examples:
+
+|filename|
+|firstFile|
+|secondFile|
+

@@ -1,0 +1,14 @@
+1) Explain the difference between getWindowHandle and getWindowHandles.
+
+	driver.getWindowHandle() – It returns a handle of the Parent Window (a unique identifier)
+	driver.getWindowHandles() – It returns a set of handles of all the windows which are currently open.
+
+2) How will you close all the windows open except the parent window?
+
+		String parentWindowHandle = driver.getWindowHandle();
+		Set<String> windowHandles = driver.getWindowHandles();
+		for (String eachHandle : windowHandles) {
+			if(!eachHandle.equals(parentWindowHandle)) {
+				driver.switchTo().window(eachHandle).close();
+			}
+		}

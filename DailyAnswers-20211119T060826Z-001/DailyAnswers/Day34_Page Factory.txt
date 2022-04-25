@@ -1,0 +1,27 @@
+1) Explain the difference between Page Object Model and Page Factory.
+	Page Object Model in Selenium is a design pattern where web pages are represented using classes. Variables in the class can then be used to hold references to elements on the web page, and methods can be used to implement behaviors. This allows an elegant way of implementing test routines that are both readable and easier to maintain and extend in the future.
+
+Example:
+	clickLoginButton();
+	setCredentials(user_name, user_password);
+	submitLoginForm();
+
+	Page Factory is used to initialize every WebElement variable with a reference to a corresponding element on the actual web page using configured “locators”. Annotations, such as @FindBy, can be used to define strategies for looking up elements, along with the necessary information for identifying them:
+
+Example:
+	please find below.
+
+2) Write a simple code for Page Factory.
+
+	public LoginPage(WebDriver driver){
+	        this.driver = driver;
+	        PageFactory.initElements(driver, this);
+    	}
+
+	@FindBy(how=How.NAME, using="username")
+	private WebElement userName;
+
+    	public void enterUserName(String uName){
+	        userName.sendKeys(UName);     
+   	 }
+	

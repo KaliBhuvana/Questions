@@ -1,0 +1,21 @@
+1) What is Selenium? What are the different Selenium components? Explain about Selenium Webdriver.
+	Selenium is one of the most popular automated testing suites. Selenium is designed in a way to support and encourage automation testing of functional aspects of web-based applications and a wide range of browsers and platforms. Due to its existence in the open source community, it has become one of the most accepted tools amongst the testing professionals.
+
+Selenium Components:
+	a) Selenium Integrated Development Environment (IDE) – Selenium IDE is a record and playback tool. It is distributed as a Firefox Plugin.
+	b) Selenium Remote Control (RC) – Selenium RC is a server that allows a user to create test scripts in the desired programming language. It also allows executing test scripts within the large spectrum of browsers.
+	c) Selenium WebDriver – WebDriver is a different tool altogether that has various advantages over Selenium RC. WebDriver directly communicates with the web browser and uses its native compatibility to automate. Selenium WebDriver is a browser automation framework that accepts commands and sends them to a browser. It is implemented through a browser-specific driver. It controls the browser by directly communicating with it. Selenium WebDriver supports Java, C#, PHP, Python, Perl, Ruby.
+
+		Operation System Support – Windows, Mac OS, Linux, Solaris
+		Browser Support – Mozilla Firefox, Internet Explorer, Google Chrome 12.0.712.0 and above, Safari, Opera 11.5 and above, Android, iOS, HtmlUnit 2.9 and above
+	d) Selenium Grid – Selenium Grid is used to distribute your test execution on multiple platforms and environments concurrently.
+
+2) How does Selenium communicate with the Web browsers?
+	Selenium establishes the communication with the browsers through browser drivers. These drivers are specific to the browsers. Browser drivers communicate with respective browser without revealing the internal logic of browser’s functionality. When a browser driver is  received any command then that command will be executed on the respective browser and the response will go back in the form of HTTP response.
+
+Browsers with its corresponding drivers
+		Chrome Browser - ChromeDriver
+		Firefox Browser - GeckoDriver
+		IE browser - IEDriverServer
+		Safari browser - SafariDriver
+		Edge Browser - EdgeDriver

@@ -1,0 +1,31 @@
+1) What is an Array? How will you declare an array in Java?
+
+	a) Array is a collection of similar data types.
+	b) It can not have different data type. It can hold both primitive types (int, float, double) and object references.
+	c) It is fixed in length i.e static in nature. 
+	d) Arrays are created on the heap memory not on the stack.
+	e) Accessing an invalid index of an Array will cause exception.
+
+	You can declare an Array in java by the following way :
+
+	dataType[]    arrayVariableName  = new dataType[arraySize];
+
+for example for int data type, you can declare an int array as :
+
+	int[]  temp = new int[256]
+
+2) When will you get ArrayIndexOutOfBounds Exception?
+	ArrayOutOfBoundsException is thrown when an attempt is made to access the Array with illegal index. For example, illegal index means if the index is either negative or greater than or equal to the size of the Array.
+	For example,
+
+public class ExceptionExample{
+    
+    public static void main(String args[]) {
+
+    	int[]  rollNumber = { 23, 17, 20, 29, 30 };
+    	/* Index below is greater than the size 
+   	of the given Array */
+   	int element = rollNumber[6];
+	System.out.println(element);
+    }
+}
